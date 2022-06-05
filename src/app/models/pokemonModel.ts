@@ -9,7 +9,7 @@ export class pokemonModel {
   private _taille: number;
   private _poids: number;
   private _image: string;
-  //private _generation!: generationModel;
+  private _generation: generationModel |  undefined;
 
   constructor(
     id: number,
@@ -18,7 +18,6 @@ export class pokemonModel {
     type: Type[],
     taille: number,
     poids: number,
-    // generation: generationModel
   ) {
     this._id = id;
     this._nom = nom;
@@ -86,7 +85,13 @@ export class pokemonModel {
     this._image = value;
   }
 
-  
+  get generation(): generationModel {
+    return <generationModel>this._generation;
+  }
+
+  set generation(value: generationModel) {
+    this._generation = value;
+  }
 
   //   public toString(): string {
   //     return this.nom + ' ' + this.catégorie;
