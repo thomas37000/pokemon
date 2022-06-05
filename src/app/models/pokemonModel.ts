@@ -1,11 +1,11 @@
 import { generationModel } from './generationModel';
+import { Type } from './Type';
 
 export class pokemonModel {
   private _id: number;
   private _nom: string;
   private _categorie: string;
-  private _type: string;
-  // private _type: Type[];
+  private _type: Type[];
   private _taille: number;
   private _poids: number;
   private _image: string;
@@ -15,7 +15,7 @@ export class pokemonModel {
     id: number,
     nom: string,
     categorie: string,
-    type: string,
+    type: Type[],
     taille: number,
     poids: number,
     // generation: generationModel
@@ -54,11 +54,11 @@ export class pokemonModel {
     this._categorie = value;
   }
 
-  get type(): string {
+  get type(): Type[] {
     return this._type;
   }
 
-  set type(value: string) {
+  set type(value: Type[]) {
     this._type = value;
   }
 
@@ -85,6 +85,8 @@ export class pokemonModel {
   set image(value: string) {
     this._image = value;
   }
+
+  
 
   //   public toString(): string {
   //     return this.nom + ' ' + this.catégorie;

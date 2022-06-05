@@ -1,1 +1,41 @@
-<p>pokemons works!</p>
+<p *ngIf="pokemons.length == 0">Il n'y a pas de Pokémons</p>
+
+<div>{{ pokemons.length }} pokémons en base de données</div>
+
+<div
+  class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-wrap"
+>
+  <div *ngFor="let pok of pokemons" class="card">
+    <a href="#">
+      <img class="rounded-t-lg" [src]="pok.image" [alt]="pok.nom" />
+    </a>
+    <div class="p-5">
+      <a href="#">
+        <h5
+          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+        >
+          {{ pok.nom }}
+        </h5>
+      </a>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Catégorie: </span>{{ pok.categorie }}
+      </p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Type: </span>{{ pok.type }}
+      </p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Taille: </span>{{pok.taille / 100 | number:'1.0-2'}} m
+      </p>
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+        <span>Poids: </span> {{ pok.poids }} kg
+      </p>
+      <a
+        href="#"
+        class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      >
+        Read more
+      </a>
+      <p class="id-pokemon">{{pok.id | number:'3.0-0'}}</p>
+    </div>
+  </div>
+</div>

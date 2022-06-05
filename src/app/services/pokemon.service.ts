@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Type} from "../models/Type";
 import { pokemonModel } from '../models/pokemonModel';
 
 @Injectable({
@@ -12,7 +13,10 @@ export class PokemonService {
       1,
       'Bulbizarre',
       'graine',
-      'plante - poisson',
+      [
+        Type.plante, // new Type("plante"),
+        Type.poison // new Type("poison");
+      ],
       70,
       6.9
     );
@@ -20,7 +24,10 @@ export class PokemonService {
       2,
       'Herbizarre',
       'graine',
-      'plante - poisson',
+      [
+        Type.plante, 
+        Type.poison 
+      ],
       100,
       13,
     );
@@ -28,7 +35,10 @@ export class PokemonService {
       3,
       'Florizarre',
       'graine',
-      'plante - poisson',
+      [
+        Type.plante, 
+        Type.poison 
+      ],
       200,
       100,
     );
@@ -36,7 +46,9 @@ export class PokemonService {
       4,
       'Salamèche',
       'lézard',
-      'feu',
+      [
+        Type.feu
+      ],
       60,
       8.5,
     );
@@ -44,7 +56,9 @@ export class PokemonService {
       5,
       'Reptincel',
       'flamme',
-      'feu',
+      [
+        Type.feu
+      ],
       110,
       19,
     );
@@ -52,7 +66,10 @@ export class PokemonService {
       6,
       'Dracaufeu',
       'flamme',
-      'feu - vol',
+      [
+        Type.feu,
+        Type.vol
+      ],
       170,
       90.5,
     );
