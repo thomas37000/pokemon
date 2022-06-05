@@ -1,1 +1,9 @@
-<p>generations works!</p>
+<p *ngIf="generations.length == 0">Il n'y a aucune générations de Pokémons</p>
+
+<div *ngIf="generations.length > 0" class="generation">
+  <div *ngFor="let gen of generations">
+    <button (click)="pokemonByGeneration()">
+      {{ gen.nom }}
+    </button>
+  </div>
+</div>
