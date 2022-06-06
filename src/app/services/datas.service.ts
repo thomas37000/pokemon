@@ -18,4 +18,8 @@ export class DatasService {
   getAllDatasPokemon(name: string) {
     return this._http.get(`https://pokeapi.co/api/v2/pokemon/${name}`);
   }
+
+  getGenerationsPokemon(name: string) {
+    return this._http.get(`https://pokeapi.co/api/v2/ability/${name}`);
+  }
 }

@@ -1,3 +1,12 @@
 .lien-api {
-    color: blue;
+  color: blue;
+}
+
+.pok-name {
+  /* font-family: 'Noto Serif JP', serif; */
+  font-family: "Rubik", sans-serif;
+}
+
+.font-japonais {
+  font-family: "Noto Serif JP", serif;
 }
