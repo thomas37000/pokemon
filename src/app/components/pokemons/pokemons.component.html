@@ -1,6 +1,6 @@
 <p *ngIf="pokemons.length == 0">Il n'y a pas de Pokémons</p>
 
-<div>{{ pokemons.length }} pokémons en base de données</div>
+<div class="total-pokemons">{{ pokemons.length }} pokémons en base de données</div>
 
 <div
   class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 flex flex-wrap"
@@ -21,7 +21,7 @@
         <span>Catégorie: </span>{{ pok.categorie }}
       </p>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-        <span>Type: </span>{{ pok.type }}
+        <span>Type: </span>{{ pok.type.join(" - ") }}
       </p>
       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
         <span>Taille: </span>{{pok.taille / 100 | number:'1.0-2'}} m

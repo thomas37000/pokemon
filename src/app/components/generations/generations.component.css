@@ -1,6 +1,5 @@
 .generation {
     display: flex;
-    justify-content: space-around;
-    width: 1000px;
+    justify-content: space-between;
     margin-bottom: 5rem;
 }

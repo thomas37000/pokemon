@@ -21,7 +21,7 @@ export class GenerationsComponent implements OnInit {
   // quand on clique sur generation 1 par exemple
   // on affiche tous les pokémons de cette génération
   public pokemonByGeneration():void{
-
+    
   }
 
 }
