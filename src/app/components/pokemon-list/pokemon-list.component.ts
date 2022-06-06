@@ -4,7 +4,7 @@ import { DatasService } from '../../services/datas.service';
 @Component({
   selector: 'app-pokemon-list',
   templateUrl: './pokemon-list.component.html',
-  styleUrls: ['./pokemon-list.component.css'],
+  styleUrls: ['./pokemon-list.component.css', '../../app.component.css'],
 })
 export class PokemonListComponent implements OnInit {
   pokemonList: any[] = [];

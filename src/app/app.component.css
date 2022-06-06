@@ -2,3 +2,19 @@
     width: 800px;
     margin: 0 auto;
 }
+
+.total-pokemons {
+    margin: 1rem 0;
+    opacity: 0.7;
+}
+
+.card span {
+    font-weight: 600;
+}
+
+.id-pokemon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    opacity: 0.4;
+}
